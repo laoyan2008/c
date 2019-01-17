@@ -1,6 +1,25 @@
 #include <stdio.h>
 char arr[1024];
 int index = 0;
+int isminggan(char x)
+{
+    int count=0;
+    for(int i=0;i<index;i++)
+    {
+        if(x==arr[i])
+        {
+            count++;
+        }
+    }
+    if(count=0)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
 
 int main()
 {
@@ -62,11 +81,31 @@ int main()
         }
         if(code==4)
         {
-
+            printf("请输入一段英文\n");
+            char shuru[1024];
+            scanf("%s",shuru);
+            for(int i=0;1;i++)
+            {
+                if(shuru[i]=='\0')
+                {
+                    break;
+                }
+                char x=shuru[i];
+                int r=isminggan(x);
+                if(r == 1)
+                {
+                    shuru[i]='*';
+                }
+                printf("%c",shuru[i]);
+            }
+            printf("替换完成，回车继续\n");
+            char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
         }
         if(code==5)
         {
-            break
+            break;
         }
     }
 
