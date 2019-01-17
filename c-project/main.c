@@ -33,11 +33,32 @@ int main()
         }
         if(code==2)
         {
+            printf("删除最后一个敏感字符\n");
+            if(index=0)
+            {
+            printf("当前无可删除敏感字符\n");
+            }
+            else
+            {
+            index--;
+            printf("删除成功，回车继续\n");
+            }
+            char x;
+            scanf("%C",&x);
+            scanf("%C",&x);
 
         }
         if(code==3)
         {
-
+            printf("当前所有敏感字符为;\n");
+            for(int i=0;i<index;i++)
+            {
+                printf("第%d个敏感字符为%c\n",i+1,arr[i]);
+            }
+            printf("回车继续\n");
+            char x;
+            scanf("%C",&x);
+            scanf("%C",&x);
         }
         if(code==4)
         {
