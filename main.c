@@ -11,7 +11,7 @@ int isminggan(char x)
             count++;
         }
     }
-    if(count=0)
+    if(count==0)
     {
         return 0;
     }
